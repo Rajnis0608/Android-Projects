@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Java</string>
+    <string name="name_field">" नाम"</string>
+    <string name="whipped_cream">फेटी हुई मलाई</string>
+    <string name="topping">" टॉपिंग"</string>
+    <string name="chocolate">चॉकलेट</string>
+    <string name="limit_increased">आपके पास 100 से अधिक कॉफी नहीं हो सकती</string>
+    <string name="quantity">मात्रा</string>
+    <string name="order">आदेश</string>
+    <string name="name_summary">" नाम :"</string>
+    <string name="quantity_summary">मात्रा :</string>
+    <string name="whipped_cream_summary">उपयोग फेटी हुई मलाई</string>
+    <string name="chocolate_summary">उपयोग चॉकलेट</string>
+    <string name="total">कुल: $</string>
+    <string name="thank_you">धन्यवाद!!</string>
+    <string name="mail_subject">ऑर्डर:</string>
+    <string name="limit_decreased">आपके पास 1 से कम कॉफी नहीं हो सकती</string>
+</resources>

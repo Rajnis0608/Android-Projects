@@ -1,5 +1,6 @@
 package com.example.java;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -51,21 +52,26 @@ public class MainActivity extends AppCompatActivity {
      * @param price of the order
      * @return text summary
      */
-    private String createOrderSummary(String userName,int price,boolean hasWhippedCream,boolean hasChocolate) {
-        String priceMessage = "Name: " +userName+ "\n" + "Quantity: "+ quantity +"" ;
+
+    private String createOrderSummary(String userName, int price, boolean hasWhippedCream, boolean hasChocolate) {
+        String priceMessage ="";
+        priceMessage += getString(R.string.name_summary) + userName;
+        priceMessage += "\n" + getString(R.string.quantity_summary) + quantity;
         if(hasWhippedCream){
-            priceMessage += "\nAdded whipped cream";
+            priceMessage += "\n" + getString(R.string.whipped_cream_summary) ;
         }
         if(hasChocolate){
-            priceMessage += "\nAdded Chocolate";
+            priceMessage += "\n" + getString(R.string.chocolate_summary);
         }
-        priceMessage += " \nTotal: $" + price + "\nThank You!!";
+        priceMessage += " \n" + getString(R.string.total) + price ;
+        priceMessage += "\n" + getString(R.string.thank_you);
         return priceMessage;
     }
 
     /**
      * This method is called when the order button is clicked.
      */
+    @SuppressLint("StringFormatInvalid")
     public void submitOrder(View view) {
         // Figure out if the user wants whipped cream topping
         CheckBox  whippedCreamCheckbox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
@@ -86,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         //Email Intent
         Intent email = new Intent(Intent.ACTION_SEND);
         email.putExtra(Intent.EXTRA_EMAIL, new String[]{"rajnis0608@gmail.com"});
-        email.putExtra(Intent.EXTRA_SUBJECT, "Just Java order for : " + userName);
+        email.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_subject,userName));
         email.putExtra(Intent.EXTRA_TEXT, priceMessage);
         email.setType("message/rfc822");
         startActivity(email);
@@ -100,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void increment(View view) {
         if(quantity == 100){
-            Toast.makeText(this,"You cannot have more than 100 coffee",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getString(R.string.limit_increased),Toast.LENGTH_SHORT).show();
             return;
         }
         quantity = quantity + 1;
@@ -112,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void decrement(View view) {
         if (quantity == 1){
-            Toast.makeText(this,"You cannot have less than 1 coffee",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getString(R.string.limit_decreased),Toast.LENGTH_SHORT).show();
             return;
         }
         quantity = quantity - 1;
