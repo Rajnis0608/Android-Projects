@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         pauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer.pause(); 
+                mediaPlayer.pause();
             }
         });
     }
