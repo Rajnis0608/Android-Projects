@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Coding/Andriod/QuakeReport/app/src/main/res/drawable/magnitude_circle.xml" value="0.15" />
         <entry key="..\:/Coding/Andriod/QuakeReport/app/src/main/res/layout/activity_earthquake.xml" value="0.12817028985507245" />
         <entry key="..\:/Coding/Andriod/QuakeReport/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Coding/Andriod/QuakeReport/app/src/main/res/layout/earthquake_list_item.xml" value="0.1118659420289855" />
       </map>
     </option>
   </component>
